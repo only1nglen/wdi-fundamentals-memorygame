@@ -1,4 +1,25 @@
-const cards = ["queen" , "queen" , "king", "king"];
+var cards = [
+{
+rank: "queen",
+suit: "hearts",
+cardImage: "images/queen-of-hearts.png"
+},
+{
+rank: "queen",
+suit: "diamonds",
+cardImage: "images/queen-of-diamonds.png"
+},
+  {
+rank: "king",
+suit: "hearts",
+cardImage: "images/king-of-hearts.png"
+}, 
+  {
+rank: "king",
+suit: "diamonds",
+cardImage: "images/king-of-diamonds.png"
+},
+];
 
 const cardsInPlay = []
 
@@ -14,11 +35,15 @@ if (cardsInPlay[0] === cardsInPlay[1]) {
 };
 
 function flipCard (cardID) {
-	cardsInPlay.push(cards[0]);
-	console.log("User flipped " + cards[0]);
+	cardsInPlay.push(cards[0].rank);
+	console.log("User flipped " + cards[cardID].rank);
+	console.log(cards[cardID].cardImage);
+	console.log(cards[cardID].suit);
 
-	cardsInPlay.push(cards[2]);
-	console.log("user flipped " + cards[2]);
+	cardsInPlay.push(cards[2].rank);
+	console.log("user flipped " + cards[cardID].rank);
+	console.log(cards[cardID].cardImage);
+	console.log(cards[cardID].suit);
 
 if (cardsInPlay.length === 2) {
 	//console.log("2 cards in play");
